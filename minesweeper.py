@@ -3,14 +3,12 @@ from z3 import Int, Solver
 
 
 def get_surrounds(grid, x, y, width, height):
-    s = [
+    return [
         grid[x + dx][y + dy]
         for dx in range(-1, 2)
         for dy in range(-1, 2)
         if x + dx >= 0 and x + dx < width and y + dy >= 0 and y + dy < height
     ]
-    print(s)
-    return s
 
 
 def main():
